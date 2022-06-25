@@ -1,0 +1,13 @@
+.works::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.works {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.vertical-text{
+    writing-mode: vertical-rl; 
+    text-orientation: mixed;
+}
