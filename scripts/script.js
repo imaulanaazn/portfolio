@@ -1,20 +1,47 @@
-const menus = document.querySelectorAll('nav ul.menu-container li a');
-let lastClickedMenu = 'home-nav';
 const title = document.getElementById('title');
+const menus = document.querySelectorAll('.menu');
+
+  if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+    sessionStorage.setItem('prevClickedMenu','home-btn');
+    sessionStorage.setItem('clickedMenu','home-btn');
+  } 
 
 menus.forEach(menu => menu.addEventListener('click',()=>{
-    homeWorksSwitch(menu)
+    sessionStorage.setItem('clickedMenu',`${menu.getAttribute('id')}`)
+    if(menu.getAttribute('id') === 'about-btn'){
+        showAbout();
+    }else{
+        mbuh();
+    }
 }))
 
-function homeWorksSwitch(menu){
-    if(menu.getAttribute('id') === 'home-nav' && lastClickedMenu !== 'home-nav'){
-       runWorks(menu);
+function mbuh(){
+    const clickedMenu = sessionStorage.getItem('clickedMenu');
+    const prevClickedMenu = sessionStorage.getItem('prevClickedMenu');
+    if(clickedMenu === 'works-btn' &&  prevClickedMenu === null ){
+        runWorks()
+        sessionStorage.setItem('prevClickedMenu',clickedMenu);
     }
-    if(menu.getAttribute('id') === 'works-nav' && lastClickedMenu !== 'works-nav'){
-        runHome(menu);
-}}
+    if(clickedMenu === 'works-btn' && prevClickedMenu === 'home-btn'){
+        runWorks()
+        sessionStorage.setItem('prevClickedMenu',clickedMenu);
+    }
+    if(clickedMenu === 'home-btn' && prevClickedMenu === 'works-btn'){
+        runHome()
+        sessionStorage.setItem('prevClickedMenu',clickedMenu);
+    }
+    if(clickedMenu === 'works-btn' && prevClickedMenu === 'blog-btn'){
+        runWorks()
+        sessionStorage.setItem('prevClickedMenu',clickedMenu);
+    }
+    if(clickedMenu === 'about-btn' && prevClickedMenu === 'blog-btn'){
+            showAbout()
+            sessionStorage.setItem('prevClickedMenu',clickedMenu);
+    }
+}
 
-function runWorks(menu){
+function runHome(){
+    
     gsap.to('#logo',{
         left: '1.5rem',
         x:'0',
@@ -47,10 +74,10 @@ function runWorks(menu){
         rotate: '0deg'
     })
     title.textContent = "Make It Simple :)"
-    lastClickedMenu = menu.getAttribute('id');
+    
 }
 
-function runHome(menu){
+function runWorks(){
     gsap.to('#logo',{
         left: '0',
         x:'-100%',
@@ -85,6 +112,81 @@ function runHome(menu){
     gsap.to('#title',{
         rotate: '-45deg'
     })
-    title.textContent = "Some Of My Work."
-    lastClickedMenu = menu.getAttribute('id');
+    title.textContent = "Some Of My Work."   
 }
+
+function showAbout(){
+    gsap.to('.bg-circle',{
+        scale: 5,
+        duration: .6
+    })
+    gsap.to('.circle',{
+        opacity: 0,
+        duration: .6
+    })
+    gsap.to('.about',{
+        display: 'block'
+    })
+    gsap.to('.about header',{
+        opacity: 1,
+        delay: .6,
+        duration: .6
+    })
+    gsap.to('.about .main',{
+        opacity: 1,
+        delay: .6,
+        duration: .6
+    })
+    gsap.to('main',{
+        display: 'none',
+        delay: .6
+    })
+    document.querySelector('body');
+}
+
+function hideAbout(){
+    gsap.to('main',{
+        display: 'flex',
+    })
+    gsap.to('.about .main',{
+        opacity: 0,
+        duration: .6
+    })
+    gsap.to('.about header',{
+        opacity: 0,
+        duration: .6
+    })
+    gsap.to('.about',{
+        display: 'none'
+    })
+    gsap.to('.circle',{
+        opacity: 1,
+        duration: .6,
+        delay: 1
+    })
+    gsap.to('.bg-circle',{
+        scale: 1,
+        duration: .6,
+        delay: .6
+    })
+}
+
+const aboutToHomeBtn = document.getElementById('about-to-home-btn');
+aboutToHomeBtn.addEventListener('click',()=>{
+    hideAbout()
+    setTimeout(()=>{
+        runHome();
+    },1000)
+    sessionStorage.setItem('prevClickedMenu','home-btn');
+    sessionStorage.setItem('clickedMenu','home-btn');
+})
+
+const aboutToWorksBtn = document.getElementById('about-to-works-btn');
+aboutToWorksBtn.addEventListener('click',()=>{
+    hideAbout()
+    setTimeout(()=>{
+        runWorks();
+    },1000)
+    sessionStorage.setItem('prevClickedMenu','works-btn');
+    sessionStorage.setItem('clickedMenu','works-btn');
+})

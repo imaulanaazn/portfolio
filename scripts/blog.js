@@ -1,4 +1,5 @@
-// const worksBtn = document.getElementById('works-btn');
-// worksBtn.addEventListener('click',(event)=>{
-//     sessionStorage.setItem('isFromHome','false');
-// })
+const menus = document.querySelectorAll('.menu');
+menus.forEach(menu => menu.addEventListener('click',()=>{
+    sessionStorage.setItem('clickedMenu',`${menu.getAttribute('id')}`)
+    sessionStorage.setItem('prevClickedMenu',`blog-btn`)
+}))
