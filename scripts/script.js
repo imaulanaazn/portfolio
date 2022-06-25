@@ -8,6 +8,7 @@ const menus = document.querySelectorAll('.menu');
 
 menus.forEach(menu => menu.addEventListener('click',()=>{
     sessionStorage.setItem('clickedMenu',`${menu.getAttribute('id')}`)
+
     if(menu.getAttribute('id') === 'about-btn'){
         showAbout();
     }else{
@@ -19,24 +20,27 @@ function mbuh(){
     const clickedMenu = sessionStorage.getItem('clickedMenu');
     const prevClickedMenu = sessionStorage.getItem('prevClickedMenu');
     if(clickedMenu === 'works-btn' &&  prevClickedMenu === null ){
-        runWorks()
-        sessionStorage.setItem('prevClickedMenu',clickedMenu);
+        runWorks();
+        showWorksUnderline();
     }
     if(clickedMenu === 'works-btn' && prevClickedMenu === 'home-btn'){
-        runWorks()
+        runWorks();
+        showWorksUnderline();
         sessionStorage.setItem('prevClickedMenu',clickedMenu);
     }
     if(clickedMenu === 'home-btn' && prevClickedMenu === 'works-btn'){
-        runHome()
+        runHome();
+        showHomeUnderline();
         sessionStorage.setItem('prevClickedMenu',clickedMenu);
     }
     if(clickedMenu === 'works-btn' && prevClickedMenu === 'blog-btn'){
-        runWorks()
+        runWorks();
+        showWorksUnderline();
         sessionStorage.setItem('prevClickedMenu',clickedMenu);
     }
     if(clickedMenu === 'about-btn' && prevClickedMenu === 'blog-btn'){
-            showAbout()
-            sessionStorage.setItem('prevClickedMenu',clickedMenu);
+        showAbout();
+        sessionStorage.setItem('prevClickedMenu',clickedMenu);
     }
 }
 
@@ -116,6 +120,10 @@ function runWorks(){
 }
 
 function showAbout(){
+    gsap.to('.about-underline',{
+        width: '100%',
+        duration: 1
+    })
     gsap.to('.bg-circle',{
         scale: 5,
         duration: .6
@@ -171,9 +179,28 @@ function hideAbout(){
     })
 }
 
+function showWorksUnderline(){
+    gsap.to('.home-underline',{
+        width: 0
+    })
+    gsap.to('.works-underline',{
+        width: '100%'
+    })
+}
+
+function showHomeUnderline(){
+    gsap.to('.home-underline',{
+        width: '100%'
+    })
+    gsap.to('.works-underline',{
+        width: 0
+    })
+}
+
 const aboutToHomeBtn = document.getElementById('about-to-home-btn');
 aboutToHomeBtn.addEventListener('click',()=>{
     hideAbout()
+    showHomeUnderline();
     setTimeout(()=>{
         runHome();
     },1000)
@@ -184,6 +211,7 @@ aboutToHomeBtn.addEventListener('click',()=>{
 const aboutToWorksBtn = document.getElementById('about-to-works-btn');
 aboutToWorksBtn.addEventListener('click',()=>{
     hideAbout()
+    showWorksUnderline();
     setTimeout(()=>{
         runWorks();
     },1000)
