@@ -50,7 +50,7 @@ function runHome(){
         left: '1.5rem',
         x:'0',
     })
-    gsap.to('#address',{
+    gsap.to('#role',{
         left: '1.5rem',
         x:'0',
         delay: '.1',
@@ -86,7 +86,7 @@ function runWorks(){
         left: '0',
         x:'-100%',
     })
-    gsap.to('#address',{
+    gsap.to('#role',{
         left: '0',
         x:'-100%',
         delay: '.1',
@@ -120,10 +120,6 @@ function runWorks(){
 }
 
 function showAbout(){
-    gsap.to('.about-underline',{
-        width: '100%',
-        duration: 1
-    })
     gsap.to('.bg-circle',{
         scale: 5,
         duration: .6
