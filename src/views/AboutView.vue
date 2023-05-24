@@ -3,7 +3,7 @@
     <!-- ABOUT NAVBAR -->
     <header class="w-full lg:h-20 md:h-28 h-20 flex justify-between items-center transition-all">
         <div class="logo">
-            <img src="./images/myLogo.svg" alt="" class="lg:w-10 w-10 md:w-16 ">
+            <img src="/images/myLogo.svg" alt="" class="lg:w-10 w-10 md:w-16 ">
         </div>
         <nav class="w-2/3 flex justify-end">
             <ul class="flex lg:w-2/4 w-full justify-between">
