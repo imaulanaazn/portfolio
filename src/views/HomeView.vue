@@ -31,10 +31,10 @@
         <!-- ASIDE WHEN HOME IS ON -->
         <div :class="`home-aside relative h-screen ${activePage === 1 ? 'translate-x-0' : activePage === 2 ? '-translate-x-full' : '-translate-x-[200%]'}`">
           <header id="logo" class="swipe-left absolute top-6 left-6 z-50">
-            <img src="../assets/icons/myLogo.svg" class="lg:w-10 w-10 md:w-16" alt="">
+            <img src="/icons/myLogo.svg" class="lg:w-10 w-10 md:w-16" alt="">
           </header>
           <div class="profile absolute top-0 left-0 bg-neutral-900 w-full h-full">
-              <img src="../assets/images/myself.png" class="w-11/12 absolute bottom-0" alt="">
+              <img src="/images/myself.png" class="w-11/12 absolute bottom-0" alt="">
               <p id="role" class="absolute text-white bottom-6 left-6 lg:text-sm md:text-3xl text-sm font-semibold">Front End Developer</p>
           </div>
         </div>
@@ -87,16 +87,16 @@
           <!-- SOCIAL MEDIA ON THE RIGHT SIDE -->
           <div class="socmed flex md:flex-col justify-evenly xl:h-2/5 lg:h-2/4 md:h-2/5 md:w-auto w-full absolute md:top-1/2 md:right-10 bottom-8 md:px-0 sm:px-20 px-18 md:-translate-y-1/2 mx-auto">
               <a href="https://github.com/imaulanaazn" target="_blank" class="hover:scale-125 hover:bg-yellow-400 transition-all duration-300">
-                <img src="../assets/icons/github.png" alt="" class="lg:w-5 sm:h-7 lg:h-5 sm:w-7 w-6 h-6">
+                <img src="/icons/github.png" alt="" class="lg:w-5 sm:h-7 lg:h-5 sm:w-7 w-6 h-6">
               </a>
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=i.maulana.azn@gmail.com&bcc=i.maulana.azn@gmail.com" target="_blank" class="hover:scale-125 hover:bg-yellow-400 transition-all duration-300">
-                <img src="../assets/icons/mail.png" alt="" class="lg:w-5 sm:h-7  lg:h-5 sm:w-7 w-6 h-6">
+                <img src="/icons/mail.png" alt="" class="lg:w-5 sm:h-7  lg:h-5 sm:w-7 w-6 h-6">
               </a>
               <a href="https://t.me/irham_maulana" target="_blank" class="hover:scale-125 hover:bg-yellow-400 transition-all duration-300">
-                <img src="../assets/icons/telegram.png" alt="" class="lg:w-5 sm:h-7  lg:h-5 sm:w-7 w-6 h-6">
+                <img src="/icons/telegram.png" alt="" class="lg:w-5 sm:h-7  lg:h-5 sm:w-7 w-6 h-6">
               </a>
               <a href="https://twitter.com/irham__maulana" target="_blank" class="hover:scale-125 hover:bg-yellow-400 transition-all duration-300">
-                <img src="../assets/icons/twitter.png" alt="" class="lg:w-5 sm:h-7  lg:h-5 sm:w-7 w-6 h-6">
+                <img src="/icons/twitter.png" alt="" class="lg:w-5 sm:h-7  lg:h-5 sm:w-7 w-6 h-6">
               </a>
           </div>
       </section>
@@ -117,37 +117,37 @@
             <p class="text-base text-slate-700 mb-4 sm:w-96">I have learned so many thing in web programming field for the past years. some of the skills that i have learned so far are :</p>
             <div class="md:w-8/12 sm:w-4/5 w-full grid grid-cols-5 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-5 gap-3">
               <div class="w-full bg-rose-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/html-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/html-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-sky-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/css-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/css-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-amber-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/javascript-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/javascript-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-sky-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/reactjs-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/reactjs-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-gray-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/nextjs-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/nextjs-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-emerald-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/vue-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/vue-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-teal-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/tailwind-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/tailwind-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-violet-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/bootstrap-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/bootstrap-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-blue-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/mui-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/mui-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-green-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/mongodb-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/mongodb-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
               <div class="w-full bg-slate-100 shadow-md flex items-center justify-center py-2">
-                <img src="../assets/images/mysql-icon.svg" class="w-9/12 opacity-80" alt="">
+                <img src="/images/mysql-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
             </div>
   
@@ -167,7 +167,7 @@
       <section id="3" class="showcase-content relative w-full lg:h-screen flex items-center justify-center pb-20 lg:pb-0">
         <h1 class="absolute top-1/2 left-0 -translate-y-1/2 font-extrabold text-lg tracking-wide mx-4">SOME MY WORKS</h1>
         <div class="w-8/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
-          <div v-for="(workData, id) in worksData" @click="updateWorkDetail(id)" class="bg-gray-200 w-full h-0 pb-[100%] bg-cover" :style="`background-image: url(src/assets${workData.img});`">
+          <div v-for="(workData, id) in worksData" @click="updateWorkDetail(id)" class="bg-gray-200 w-full h-0 pb-[100%] bg-cover" :style="`background-image: url(${workData.img});`">
             <a :href="workData.url" target="_blank" class="lg:hidden block w-full h-full pb-[100%]"></a>
           </div>
         </div>
