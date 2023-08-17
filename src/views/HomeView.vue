@@ -1,8 +1,8 @@
 <template>
 
   <div class="page-container">
-    <!-- NAVBAR -->
-    <nav class="fixed lg:w-2/3 w-full z-50 top-0 right-0 flex justify-center sm:py-8 py-5 bg-white">
+    <!-- DESKTOP NAVBAR -->
+    <nav class="hidden lg:flex fixed lg:w-2/3 w-full z-50 top-0 right-0 flex justify-center bg-white py-8">
         <ul class="menu-container flex xl:w-2/5 lg:w-2/3 md:w-4/5 sm:w-9/12 w-full justify-evenly">
             <li class="relative">
               <span :class="`home-underline absolute block bottom-0 left-0 h-1/3 bg-yellow-400 z-0 ${activePage === 1 ? 'w-full' : 'w-0'}`">
@@ -25,13 +25,25 @@
         </ul>
     </nav>
 
+    <!-- MOBILE NAVBAR -->
+    <nav class="w-full fixed z-50 backdrop-blur-lg flex justify-between lg:hidden md:px-24 px-5 sm:py-8 py-4">
+      <div class="logo">
+        <img src="/icons/myLogo_dark.svg" alt="" class="w-9">
+      </div>
+      <div class="burger">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </div>
+    </nav>
+    
+
+
     <!-- ASIDE INFO -->
     <aside class="lg:w-1/3 w-full fixed lg:block hidden">
 
         <!-- ASIDE WHEN HOME IS ON -->
         <div :class="`home-aside relative h-screen ${activePage === 1 ? 'translate-x-0' : activePage === 2 ? '-translate-x-full' : '-translate-x-[200%]'}`">
           <header id="logo" class="swipe-left absolute top-6 left-6 z-50">
-            <img src="/icons/myLogo.svg" class="lg:w-10 w-10 md:w-16" alt="">
+            <img src="/icons/myLogo_bright.svg" class="lg:w-10 w-10 md:w-16" alt="">
           </header>
           <div class="profile absolute top-0 left-0 bg-neutral-900 w-full h-full">
               <img src="/images/myself.png" class="w-11/12 absolute bottom-0" alt="">
@@ -75,17 +87,23 @@
     </aside>
     
     <!-- MAIN SECTION -->
-    <main id="scroll-container" class="lg:w-2/3 w-full relative bg-white sm:px-6 px-2 lg:ml-auto">
+    <main id="scroll-container" class="lg:w-2/3 w-full relative bg-white md:px-12 sm:px-6 px-5 lg:ml-auto">
       
       <!-- HOME CONTENT -->
-      <section id="1" class="home-content relative w-full h-screen">
+      <section id="1" class="home-content relative w-full lg:h-screen pt-28 lg:pt-0">
           <!-- THE CIRCLE THING -->
-          <div class="sm:w-96 sm:h-96 w-80 h-80 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center bg-yellow-400 rounded-full">
-            <h1 id="title" class="w-80 font-extrabold text-5xl text-center">Make It Simple :)</h1>
+          <div class="sm:w-96 sm:h-96 w-56 h-56 lg:absolute lg:top-1/2 lg:left-1/2 
+          lg:-translate-y-1/2 lg:-translate-x-1/2 flex items-center 
+          justify-center bg-yellow-400 rounded-full overflow-hidden mx-auto">
+            <h1 id="title" class="hidden lg:block w-80 font-extrabold text-5xl text-center">Make It Simple :)</h1>
+            <img src="/images/myself.png" class="lg:hidden w-full translate-y-1/4" alt="">
           </div>
+          
+          <h1 id="title" class="lg:hidden w-80 font-extrabold text-4xl text-center mx-auto mt-10 mb-6 max-w-[16rem]">Make It Simple :)</h1>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit qui maiores illum officiis molestiae</p>
   
           <!-- SOCIAL MEDIA ON THE RIGHT SIDE -->
-          <div class="socmed flex md:flex-col justify-evenly xl:h-2/5 lg:h-2/4 md:h-2/5 md:w-auto w-full absolute md:top-1/2 md:right-10 bottom-8 md:px-0 sm:px-20 px-18 md:-translate-y-1/2 mx-auto">
+          <div class="socmed hidden lg:flex flex-col justify-evenly xl:h-2/5 h-2/4 w-auto absolute top-1/2 right-0 -translate-y-1/2 mx-auto">
               <a href="https://github.com/imaulanaazn" target="_blank" class="hover:scale-125 hover:bg-yellow-400 transition-all duration-300">
                 <img src="/icons/github.png" alt="" class="lg:w-5 sm:h-7 lg:h-5 sm:w-7 w-6 h-6">
               </a>
@@ -99,17 +117,18 @@
                 <img src="/icons/twitter.png" alt="" class="lg:w-5 sm:h-7  lg:h-5 sm:w-7 w-6 h-6">
               </a>
           </div>
+
       </section>
   
       <!-- ABOUT CONTENT -->
       <section id="2" class="about-content w-full bg-white pt-20">
-          <div class="py-12 w-full xl:pl-52 lg:pl-44 md:px-24 px-4 relative">
+          <div class="py-12 w-full xl:pl-44 lg:pl-36 relative">
             <div class="about-text md:-translate-x-20 w-fit relative md:ml-auto mb-12">
                 <span class="absolute w-0 h-1/3 bg-yellow-400 bottom-0 left-0 z-0"></span>
                 <h2 class="about-title relative font-black text-left xl:text-8xl md:text-7xl sm:text-6xl text-5xl m-0 w-fit z-10">Irham Maulana</h2>
             </div>
-            <h1 class="tagline md:-translate-x-20 lg:w-[30rem] sm:w-96 font-extrabold lg:text-2xl md:text-3xl sm:text-2xl text-xl mb-10">An <span class="bg-yellow-400 px-2"> abstract</span> and <span class="bg-yellow-400 px-2">personal approach</span>, defined by a mood of feeling</h1>
-            <h1 class="offer md:-translate-x-20 lg:w-72 sm:w-80 font-bold lg:text-xl md:text-2xl text-lg">With my tastefull sense, I created a product with high taste of art and functionality, high quality is one of my highlighted aspect and cheap price is my prioritise.</h1>
+            <h1 class="tagline lg:-translate-x-20 lg:w-[30rem] sm:w-96 font-extrabold lg:text-2xl md:text-3xl sm:text-2xl text-xl mb-10">An <span class="bg-yellow-400 px-2"> abstract</span> and <span class="bg-yellow-400 px-2">personal approach</span>, defined by a mood of feeling</h1>
+            <h1 class="offer lg:-translate-x-20 lg:w-72 sm:w-80 font-bold lg:text-xl md:text-2xl text-lg">With my tastefull sense, I created a product with high taste of art and functionality, high quality is one of my highlighted aspect and cheap price is my prioritise.</h1>
             <p class="lg:w-72 sm:w-80 lg:text-base text-sm md:text-lg mb-5 mt-7">
               Front-end web developer with expertise in HTML, CSS, and JavaScript, with experience in React JS and Vue JS. Optimizing performance and cross-browser compatibility, collaborating with UX designers to create attractive and user-friendly interfaces. Proficient in creating responsive websites using a mobile-first approach
             </p>
@@ -165,7 +184,7 @@
   
       <!-- WORKS CONTENT -->
       <section id="3" class="showcase-content relative w-full lg:h-screen flex items-center justify-center pb-20 lg:pb-0">
-        <h1 class="absolute top-1/2 left-0 -translate-y-1/2 font-extrabold text-lg tracking-wide mx-4">SOME MY WORKS</h1>
+        <h1 class="absolute top-1/2 left-0 -translate-y-1/2 font-extrabold text-lg tracking-wide">SOME MY WORKS</h1>
         <div class="w-8/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
           <div v-for="(workData, id) in worksData" @click="updateWorkDetail(id)" class="bg-gray-200 w-full h-0 pb-[100%] bg-cover" :style="`background-image: url(${workData.img});`">
             <a :href="workData.url" target="_blank" class="lg:hidden block w-full h-full pb-[100%]"></a>
