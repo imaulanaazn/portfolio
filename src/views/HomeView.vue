@@ -198,7 +198,9 @@
       <!-- WORKS CONTENT -->
       <section id="3" class="showcase-content w-full xl:h-screen xl:pb-0 pb-12">
         <h1 class="text-4xl font-semibold pt-12 text-center">Lets work together</h1>
-        <p class="mx-auto lg:w-1/2 text-center mt-2 text-slate-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus obcaecati, reprehenderit, distinctio veniam suscipit odit </p>
+        <p class="mx-auto lg:w-1/2 text-center mt-2 text-slate-700">
+          I have built a lot of website, from landing page to e-commerce. Either using vue js or react js. I always try to serve client with my best to meet their expectation.
+        </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-12">
           <div 
           v-for="(workData, id) in worksData" 
