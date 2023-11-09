@@ -53,7 +53,7 @@
 
         <!-- ASIDE WHEN ABOUT IS ON -->
         <div :class="`about-aside absolute top-0 left-0 flex items-center justify-center bg-black h-screen w-full overflow-hidden ${activePage === 1 ? 'translate-x-full' : activePage === 2 ? 'translate-x-0' : '-translate-x-full'}`">
-          <h1 class="text-4xl text-white font-extrabold text-5xl tracking-widest" style="writing-mode: vertical-lr;">ABOUT ME</h1>  
+          <h1 class="text-4xl text-white font-extrabold text-5xl tracking-widest" style="writing-mode: vertical-lr;">Web Developer</h1>  
           <div class="scroll w-full flex absolute rotate-45 opacity-20">
             <div class="text-white font-extrabold text-9xl whitespace-nowrap">
               IRHAM <span>MAULANA • </span>IRHAM <span>MAULANA • </span>IRHAM <span>MAULANA • </span>IRHAM <span>MAULANA • </span>
@@ -90,17 +90,30 @@
     <main id="scroll-container" class="lg:w-2/3 w-full relative bg-white md:px-12 sm:px-6 px-5 lg:ml-auto">
       
       <!-- HOME CONTENT -->
-      <section id="1" class="home-content relative w-full lg:h-screen pt-28 lg:pt-0">
+      <section id="1" class="home-content relative w-full h-screen flex items-center lg:block">
+
+        <div>
           <!-- THE CIRCLE THING -->
           <div class="sm:w-96 sm:h-96 w-56 h-56 lg:absolute lg:top-1/2 lg:left-1/2 
-          lg:-translate-y-1/2 lg:-translate-x-1/2 flex items-center 
+          lg:-translate-y-1/2 lg:-translate-x-1/2 flex flex-col items-center gap-2 
           justify-center bg-yellow-400 rounded-full overflow-hidden mx-auto">
-            <h1 id="title" class="hidden lg:block w-80 font-extrabold text-5xl text-center">Make It Simple :)</h1>
+            <h1 id="title" class="hidden lg:block w-80 font-extrabold text-5xl text-center">Keep It</h1>
+            <div class="title-words overflow-hidden h-14">
+              <span class="hidden lg:block w-80 font-extrabold text-5xl text-center">Fast</span>
+              <span class="hidden lg:block w-80 font-extrabold text-5xl text-center">Elegant</span>
+              <span class="hidden lg:block w-80 font-extrabold text-5xl text-center">Efficient</span>
+              <span class="hidden lg:block w-80 font-extrabold text-5xl text-center">Simple :)</span>
+            </div>
             <img src="/images/myself.png" class="lg:hidden w-full translate-y-1/4" alt="">
           </div>
           
-          <h1 id="title" class="lg:hidden w-80 font-extrabold text-4xl text-center mx-auto mt-10 mb-6 max-w-[16rem]">Make It Simple :)</h1>
+          <!-- Text for mobile -->
+          <div class="text">
+            <h1 id="title" class="lg:hidden w-80 font-extrabold text-4xl text-center mx-auto mt-10 mb-6 max-w-[16rem]">Make It Simple :)</h1>
+          </div>
           <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit qui maiores illum officiis molestiae</p>
+
+        </div>
   
           <!-- SOCIAL MEDIA ON THE RIGHT SIDE -->
           <div class="socmed hidden lg:flex flex-col justify-evenly xl:h-2/5 h-2/4 w-auto absolute top-1/2 right-0 -translate-y-1/2 mx-auto">
@@ -125,69 +138,79 @@
           <div class="py-12 w-full xl:pl-44 lg:pl-36 relative">
             <div class="about-text md:-translate-x-20 w-fit relative md:ml-auto mb-12">
                 <span class="absolute w-0 h-1/3 bg-yellow-400 bottom-0 left-0 z-0"></span>
-                <h2 class="about-title relative font-black text-left xl:text-8xl md:text-7xl sm:text-6xl text-5xl m-0 w-fit z-10">Irham Maulana</h2>
+                <h2 class="about-title relative font-black text-left xl:text-8xl md:text-7xl sm:text-6xl text-4xl m-0 w-fit z-10">About Me</h2>
             </div>
-            <h1 class="tagline lg:-translate-x-20 lg:w-[30rem] sm:w-96 font-extrabold lg:text-2xl md:text-3xl sm:text-2xl text-xl mb-10">An <span class="bg-yellow-400 px-2"> abstract</span> and <span class="bg-yellow-400 px-2">personal approach</span>, defined by a mood of feeling</h1>
-            <h1 class="offer lg:-translate-x-20 lg:w-72 sm:w-80 font-bold lg:text-xl md:text-2xl text-lg">With my tastefull sense, I created a product with high taste of art and functionality, high quality is one of my highlighted aspect and cheap price is my prioritise.</h1>
-            <p class="lg:w-72 sm:w-80 lg:text-base text-sm md:text-lg mb-5 mt-7">
+            <h1 class="tagline lg:-translate-x-20 lg:w-[30rem] sm:w-96 font-medium lg:text-2xl md:text-3xl sm:text-2xl text-xl mb-10 text-slate-700">An <span class="bg-yellow-400 px-2"> abstract</span> and <span class="bg-yellow-400 px-2">personal approach</span>, defined by a mood of feeling</h1>
+            <h1 class="offer lg:-translate-x-20 lg:w-72 sm:w-80 font-medium lg:text-xl md:text-2xl text-lg text-slate-700">With my tastefull sense, I created a product with high taste of art and functionality, high quality is one of my highlighted aspect and cheap price is my prioritise.</h1>
+            <p class="lg:w-72 sm:w-80 text-base md:text-lg mb-5 mt-7 text-slate-700">
               Front-end web developer with expertise in HTML, CSS, and JavaScript, with experience in React JS and Vue JS. Optimizing performance and cross-browser compatibility, collaborating with UX designers to create attractive and user-friendly interfaces. Proficient in creating responsive websites using a mobile-first approach
             </p>
             <h1 class="font-bold text-base md:text-xl mt-14 mb-2"><span class="bg-yellow-400 px-2">Programming</span> skils</h1>
             <p class="text-base text-slate-700 mb-4 sm:w-96">I have learned so many thing in web programming field for the past years. some of the skills that i have learned so far are :</p>
-            <div class="md:w-8/12 sm:w-4/5 w-full grid grid-cols-5 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-5 gap-3">
-              <div class="w-full bg-rose-100 shadow-md flex items-center justify-center py-2">
+            <div class="md:w-8/12 sm:w-4/5 w-full grid grid-cols-6 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-6 gap-1">
+              <div class="w-full bg-rose-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/html-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-sky-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-sky-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/css-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-amber-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-amber-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/javascript-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-sky-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-sky-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/reactjs-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-gray-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-gray-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/nextjs-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-emerald-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-emerald-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/vue-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-teal-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-teal-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/tailwind-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-violet-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-violet-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/bootstrap-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-blue-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-blue-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/mui-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-green-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-green-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/mongodb-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
-              <div class="w-full bg-slate-100 shadow-md flex items-center justify-center py-2">
+              <div class="w-full bg-slate-100 flex border border-dashed border-black items-center justify-center py-2">
                 <img src="/images/mysql-icon.svg" class="w-9/12 opacity-80" alt="">
               </div>
             </div>
   
             <div  class="service mt-14 lg:w-96">
-              <ul class="service">
-                <li><h1 class="font-bold lg:text-base text-base md:text-xl bg-yellow-400 px-2 inline-block">Services</h1></li>
-                <li><a href="#" class="text-base lg:text-base md:text-lg">Convert any design to website</a></li>
-                <li><a href="#" class="text-base lg:text-base md:text-lg">Convert static web to React web</a></li>
-                <li><a href="#" class="text-base lg:text-base md:text-lg">Front end Development</a></li>
-                <li><a href="#" class="text-base lg:text-base md:text-lg">Custom web</a></li>
+              <h1 class="font-bold lg:text-base text-base md:text-xl bg-yellow-400 px-2 inline-block mb-2">Services</h1>
+              <ul class="service list-disc list-inside">
+                <li><a href="#" class="text-base lg:text-base md:text-lg text-slate-700">Convert any design to website</a></li>
+                <li><a href="#" class="text-base lg:text-base md:text-lg text-slate-700">Convert static web to React web</a></li>
+                <li><a href="#" class="text-base lg:text-base md:text-lg text-slate-700">Front end Development</a></li>
+                <li><a href="#" class="text-base lg:text-base md:text-lg text-slate-700">Custom web</a></li>
               </ul>
             </div>
           </div>
       </section>
   
       <!-- WORKS CONTENT -->
-      <section id="3" class="showcase-content relative w-full lg:h-screen flex items-center justify-center pb-20 lg:pb-0">
-        <h1 class="absolute top-1/2 left-0 -translate-y-1/2 font-extrabold text-lg tracking-wide">SOME MY WORKS</h1>
-        <div class="w-8/12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-5 gap-4">
-          <div v-for="(workData, id) in worksData" @click="updateWorkDetail(id)" class="bg-gray-200 w-full h-0 pb-[100%] bg-cover" :style="`background-image: url(${workData.img});`">
-            <a :href="workData.url" target="_blank" class="lg:hidden block w-full h-full pb-[100%]"></a>
+      <section id="3" class="showcase-content w-full xl:h-screen xl:pb-0 pb-12">
+        <h1 class="text-4xl font-semibold pt-12 text-center">Lets work together</h1>
+        <p class="mx-auto lg:w-1/2 text-center mt-2 text-slate-700">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus obcaecati, reprehenderit, distinctio veniam suscipit odit </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-4 mt-12">
+          <div 
+          v-for="(workData, id) in worksData" 
+          :class="workDetails.id == id+1 ? `bg-white w-full bg-cover px-3 py-3 border border-dashed border-black` : `bg-yellow-300 w-full bg-cover px-3 py-3`">
+          <img :src="workData.img" alt="" class="h-60 xl:h-48 object-cover w-full hover:cursor-pointer" @click="updateWorkDetail(id)" >
+          <div class="flex justify-between items-center pt-4">
+            <p class="text-lg font-semibold">{{workData.title}}</p>
+              <a :href="workData.url" target="_blank">  
+                <i class="fa-solid fa-arrow-right text-xl hover:text-white transition-all"></i>
+              </a>
+            </div>
+            <p class="lg:hidden mt-2">{{ workData.descript }}</p>
           </div>
         </div>
       </section>
@@ -229,7 +252,7 @@
         sections.forEach(section => {
           const sectionTop = section.offsetTop;
           const sectionHeight = section.offsetHeight;
-          if (currentScrollPos >= sectionTop && currentScrollPos < sectionTop + sectionHeight - 1) {
+          if (currentScrollPos >= sectionTop && currentScrollPos < sectionTop + sectionHeight - 150) {
             activePage = section.id;
           }
         });
@@ -244,11 +267,6 @@
     },
     destroyed() {
       window.removeEventListener('scroll', this.updateCurrentSection);
-    },
-    watch: {
-      activePage(val){
-        console.log(val)
-      }
     }
   }
 </script>
@@ -256,9 +274,6 @@
 <style scoped>
   nav, nav ul li span{
     transition: 1s ease all;
-  }
-  .showcase-content h1{
-    writing-mode: vertical-lr;
   }
   .home-aside, .work-aside, .about-aside {
     transition: 1s ease all .2s;
@@ -274,9 +289,6 @@
   .about-aside .scroll div span {
     -webkit-text-stroke: 2px rgb(255, 255, 255);
     color: transparent;
-  }
-  .circle{
-    animation: rotate 5s cubic-bezier(1,0,.31,.97) infinite;
   }
 
   @keyframes animate {

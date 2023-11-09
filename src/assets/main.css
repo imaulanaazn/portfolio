@@ -10,13 +10,13 @@
   border: 2px dotted black;
 }
 
-  .about.scroll::-webkit-scrollbar {
-    width: 1px;
-  }
-  .about.scroll::-webkit-scrollbar-thumb {
-    background-color: rgb(72, 72, 72);
-  }
-  
+.about.scroll::-webkit-scrollbar {
+  width: 1px;
+}
+.about.scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(72, 72, 72);
+}
+
   /* Hide scrollbar for IE, Edge and Firefox */
 .works {
     -ms-overflow-style: none;  /* IE and Edge */
@@ -25,4 +25,25 @@
 .vertical-text{
     writing-mode: vertical-rl; 
     text-orientation: mixed;
+}
+
+section .title-words span{
+  display: block;
+  height: 110%;
+  animation: spin_words 5s infinite;
+} 
+
+@keyframes spin_words{
+  25%{
+      transform: translateY(0%);
+  }
+  50%{
+      transform: translateY(-100%);
+  }
+  75%{
+      transform: translateY(-200%);
+  }
+  100%{
+      transform: translateY(-300%);
+  }
 }

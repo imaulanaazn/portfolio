@@ -1,6 +1,7 @@
 let skillsData = [];
 let worksData = [
     {
+        id: 1,
         title: 'Furnme',
         descript: 'Sebuah e commerce yang ditujukan untuk pemilik usaha furniture, dengan fitur lengkap dan mudah dipahami pengguna',
         techStack: ['ReactJS', 'Tailwind', 'MongoDB', 'NodeJS', 'ExpressJS'],
@@ -9,6 +10,7 @@ let worksData = [
         url: 'https://furnme.netlify.app/'
     },
     {
+        id: 2,
         title: 'StoreGG',
         descript: 'Layanan top up voucher game secara online. Kami menawarkan keamanan dan kemudahan top up voucher game apapun hanya dengan sekali tekan',
         techStack: ['ReactJS', 'NextJS', 'Tailwind', 'MongoDB', 'NodeJS', 'ExpressJS'],
@@ -17,6 +19,7 @@ let worksData = [
         url: 'https://storegg-app.netlify.app/'
     },
     {
+        id: 3,
         title: 'Notebook',
         descript: 'Notebook, cara cepat menulis blog. siapapun kapanpun dan dimanapun bisa menulis blog mereka dan membagikannya pada dunia',
         techStack: ['ReactJS', 'NextJS', 'Material UI', 'MongoDB', 'NodeJS', 'ExpressJS'],
@@ -25,6 +28,7 @@ let worksData = [
         url: 'https://notebook-me.vercel.app/'
     },
     {
+        id: 4,
         title: 'StoreGG dashboard',
         descript: 'Dashboard dari website topup voucher game StoreGG. dilengkapi dengan fitur CRUD untuk mengelola website',
         techStack: ['ExpressJS', 'Bootstrap', 'NodeJS', 'MongoDB'],
@@ -33,6 +37,7 @@ let worksData = [
         url: 'https://storegg-server.up.railway.app/'
     },
     {
+        id: 5,
         title: 'Quest',
         descript: 'Platform pembuatan front end website, dilengkapi berbagai fitur seperti convert design to front end dan ReactJS components',
         techStack: ['ReactJS', 'NextJS', 'MaterialUI'],
@@ -41,6 +46,7 @@ let worksData = [
         url: 'https://my-quest.vercel.app/'
     },
     {
+        id: 6,
         title: 'Feed MI',
         descript: 'Layanan delivery makanan untuk sebuah restoran yang ingin memenuhi kebutuhan pelanggan',
         techStack: ['ReactJS', 'Firebase', 'Tailwind'],
