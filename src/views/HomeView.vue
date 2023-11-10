@@ -109,9 +109,9 @@
           
           <!-- Text for mobile -->
           <div class="text">
-            <h1 id="title" class="lg:hidden w-80 font-extrabold text-4xl text-center mx-auto mt-10 mb-6 max-w-[16rem]">Make It Simple :)</h1>
+            <h1 id="title" class="lg:hidden w-80 font-extrabold text-4xl text-center mx-auto mt-10 mb-6 max-w-[16rem]">Irham Maulana</h1>
           </div>
-          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit suscipit qui maiores illum officiis molestiae</p>
+          <p class="text-center text-slate-800">Software engineer with web development and android development skills. Creating awesome software</p>
 
         </div>
   
@@ -140,12 +140,12 @@
                 <span class="absolute w-0 h-1/3 bg-yellow-400 bottom-0 left-0 z-0"></span>
                 <h2 class="about-title relative font-black text-left xl:text-8xl md:text-7xl sm:text-6xl text-4xl m-0 w-fit z-10">About Me</h2>
             </div>
-            <h1 class="tagline lg:-translate-x-20 lg:w-[30rem] sm:w-96 font-medium lg:text-2xl md:text-3xl sm:text-2xl text-xl mb-10 text-slate-700">An <span class="bg-yellow-400 px-2"> abstract</span> and <span class="bg-yellow-400 px-2">personal approach</span>, defined by a mood of feeling</h1>
-            <h1 class="offer lg:-translate-x-20 lg:w-72 sm:w-80 font-medium lg:text-xl md:text-2xl text-lg text-slate-700">With my tastefull sense, I created a product with high taste of art and functionality, high quality is one of my highlighted aspect and cheap price is my prioritise.</h1>
+            <h1 class="tagline lg:-translate-x-20 lg:w-[30rem] sm:w-96 font-medium lg:text-2xl md:text-3xl sm:text-2xl text-xl mb-10 text-slate-800">An <span class="bg-yellow-400 px-2"> abstract</span> and <span class="bg-yellow-400 px-2">personal approach</span>, defined by a mood of feeling</h1>
+            <h1 class="offer lg:-translate-x-20 lg:w-72 sm:w-80 font-medium lg:text-xl md:text-2xl text-lg text-slate-800">With my tastefull sense, I created a product with high taste of art and functionality, high quality is one of my highlighted aspect and cheap price is my prioritise.</h1>
             <p class="lg:w-72 sm:w-80 text-base md:text-lg mb-5 mt-7 text-slate-700">
               Front-end web developer with expertise in HTML, CSS, and JavaScript, with experience in React JS and Vue JS. Optimizing performance and cross-browser compatibility, collaborating with UX designers to create attractive and user-friendly interfaces. Proficient in creating responsive websites using a mobile-first approach
             </p>
-            <h1 class="font-bold text-base md:text-xl mt-14 mb-2"><span class="bg-yellow-400 px-2">Programming</span> skils</h1>
+            <h1 class="font-bold text-lg md:text-xl mt-14 mb-2"><span class="bg-yellow-400 px-2">Programming</span> skils</h1>
             <p class="text-base text-slate-700 mb-4 sm:w-96">I have learned so many thing in web programming field for the past years. some of the skills that i have learned so far are :</p>
             <div class="md:w-8/12 sm:w-4/5 w-full grid grid-cols-6 md:grid-cols-4 lg:grid-cols-6 2xl:grid-cols-6 gap-1">
               <div class="w-full bg-rose-100 flex border border-dashed border-black items-center justify-center py-2">
@@ -184,7 +184,7 @@
             </div>
   
             <div  class="service mt-14 lg:w-96">
-              <h1 class="font-bold lg:text-base text-base md:text-xl bg-yellow-400 px-2 inline-block mb-2">Services</h1>
+              <h1 class="font-bold lg:text-base text-lg md:text-xl bg-yellow-400 px-2 inline-block mb-2">Services</h1>
               <ul class="service list-disc list-inside">
                 <li><a href="#" class="text-base lg:text-base md:text-lg text-slate-700">Convert any design to website</a></li>
                 <li><a href="#" class="text-base lg:text-base md:text-lg text-slate-700">Convert static web to React web</a></li>
