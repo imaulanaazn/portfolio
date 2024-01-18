@@ -47,12 +47,12 @@ let worksData = [
     },
     {
         id: 6,
-        title: 'Feed MI',
-        descript: 'Layanan delivery makanan untuk sebuah restoran yang ingin memenuhi kebutuhan pelanggan',
-        techStack: ['ReactJS', 'Firebase', 'Tailwind'],
-        features: ['Authentication', 'Role based action'],
+        title: 'Snapgram',
+        descript: 'A social media with beautiful UI/UX made using vue and vite',
+        techStack: ['VueJS', 'Appwrite', 'Tailwind'],
+        features: ['Authentication', 'Role based action', "CRUD post"],
         img: '/images/work-thumb6.png',
-        url: 'https://feed-mi.vercel.app/'
+        url: 'https://snapgram-vue.vercel.app/'
     }
 ]
 
