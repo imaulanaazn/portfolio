@@ -34,7 +34,7 @@ let worksData = [
         techStack: ['ExpressJS', 'Bootstrap', 'NodeJS', 'MongoDB'],
         features: ['Authentication', 'CRUD'],
         img: '/images/work-thumb4.png',
-        url: 'https://storegg-server.up.railway.app/'
+        url: 'https://storegg-server-production.up.railway.app'
     },
     {
         id: 5,
