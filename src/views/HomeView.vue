@@ -134,9 +134,9 @@
       </section>
   
       <!-- ABOUT CONTENT -->
-      <section id="2" class="about-content w-full bg-white pt-20">
+      <section id="2" class="about-content w-full bg-white pt-10">
           <div class="py-12 w-full xl:px-14 lg:p-4 relative">
-            <div class="about-text relative mb-16">
+            <div class="about-text relative mb-12">
                 <span class="absolute w-0 h-1/3 bg-yellow-400 bottom-0 left-0 z-0"></span>
                 <h2 class="about-title relative font-semibold text-center  md:text-4xl sm:text-6xl text-4xl z-10">About Me</h2>
             </div>
@@ -240,7 +240,7 @@
               class="h-60 xl:h-48 object-cover w-full hover:cursor-pointer" 
               @click="updateWorkDetail(workData.id - 1)" 
             >
-            <p class="lg:hidden mt-2">{{ workData.descript }}</p>
+            <!-- <p class="lg:hidden mt-2">{{ workData.descript }}</p> -->
             <div 
               :class="[
                 'w-full flex justify-between items-center py-2 px-4 transition-all',
