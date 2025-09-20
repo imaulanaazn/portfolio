@@ -243,8 +243,8 @@
             <p class="lg:hidden mt-2">{{ workData.descript }}</p>
             <div 
               :class="[
-                'w-full flex justify-between items-center py-2 px-4',
-                workDetails.id === workData.id  ? 'bg-yellow-300' : 'border border-slate-800 border-dashed'
+                'w-full flex justify-between items-center py-2 px-4 transition-all',
+                workDetails.id === workData.id  ? 'bg-yellow-300 border border-slate-800 border-dashed' : 'border border-slate-800 border-dashed'
               ]"
             >
               <p class="text-base text-black">{{ workData.title }}</p>
